@@ -34,6 +34,11 @@
   border-radius: 50%;
 }
 
+.select {
+  background-color: rgba(166, 161, 161, 0.805);
+  border-radius: 10px;
+}
+
 .search {
   padding: 5px;
   margin-bottom: 10px;
@@ -42,13 +47,19 @@
   width: 100%;
 }
 
+.status::before {
+  margin: 5px;
+  font-size: 25px;
+}
 
 .online::before {
-  content: '🟢';
+  content: '•';
+  color: green;
 }
 
 .offline::before {
-  content: '🔴';
+  content: '•';
+  color: red;
 }
 
 .status {
@@ -168,7 +179,7 @@
   }
 
   .chat-header {
-    background: linear-gradient(to bottom, #c3f3a7, #36550f);
+    background: linear-gradient(to bottom, #d7dbf6, #99bced);
   }
 
   .name {
@@ -177,7 +188,7 @@
   }
 
   .chat-footer {
-    background-color: #456123;
+    background-color: #96bff9;
     opacity: 0.8;
   }
 
@@ -194,7 +205,7 @@
   }
 
   .chat-header {
-    background: linear-gradient(to bottom, #c3f3a7, #36550f);
+    background: linear-gradient(to bottom, #d7dbf6, #99bced);
   }
 
   .chat-actions {
@@ -207,7 +218,7 @@
   }
 
   .chat-footer {
-    background-color: #456123;
+    background-color: #96bff9;
     opacity: 0.8;
   }
 
