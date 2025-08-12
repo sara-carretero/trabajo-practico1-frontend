@@ -4,21 +4,24 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
-section {
-  display: flex;
+.all {
+  display: grid;
+  grid-template-columns: 25rem 1fr;
 }
 
+
 .sidebar {
-  margin: auto;
   padding: 20px;
+  background-color: #faf7f7;
 }
 
 .contact {
   display: flex;
   font-size: 15px;
+  padding: 5px;
   margin-bottom: 10px;
   gap: 10px;
+  border-bottom: 1px solid rgb(212, 212, 212);
   cursor: pointer;
 }
 
@@ -32,10 +35,11 @@ section {
 }
 
 .search {
-  margin: 10px 20px;
-  padding: 5px 20px 5px 10px;
+  padding: 5px;
+  margin-bottom: 10px;
   border-radius: 5px;
   border-color: rgb(210, 210, 210);
+  width: 100%;
 }
 
 
@@ -55,66 +59,79 @@ section {
 .chat {
   border-right: 2px solid grey;
   border-left: 2px solid grey;
-  width: 100%;
-  height: 100%;
+  background-color: #faf7f7;
+}
+
+.timestamp {
+  color: gray;
+  font-size: 12px;
+  margin-top: 5px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .chat-messages {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/027/525/710/non_2x/cute-emoji-designs-seamless-pattern-emoticon-background-vector.jpg");
+  height: 100vh;
 }
 
 .message {
   border-radius: 10px;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 20px;
+  gap: 10px;
   align-items: end;
 }
 
 .sent {
   background-color: RGB(228 242 247);
-  align-self: flex-end;
+  align-self: end;
 }
 
 .received {
   background-color: RGB(237 237 237);
-  align-self: flex-start;
+  align-self: start;
 }
 
-.chat-name {
+.chat-name,
+.name {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+
 .chat-name img {
   width: 50px;
   padding: 20px;
+  border-radius: 50%;
 }
 
 .chat-header {
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: auto;
   border-bottom: 2px solid grey;
+  background: linear-gradient(to bottom, #ffffff, #b4b4b4);
 }
 
 .chat-footer {
-  align-content: flex-end;
+  display: flex;
   border-top: 2px solid grey;
   padding: 20px;
 }
 
 .chat-footer input {
   width: 100%;
-  padding: 9px;
+  padding: 10px;
   border-radius: 5px;
   border-color: gray;
 }
 
 .btn {
   border: none;
+  border-radius: 50%;
   background-color: white;
   padding: 5px;
   cursor: pointer;
@@ -122,4 +139,77 @@ section {
 
 .btn:hover {
   background-color: rgb(201, 199, 199);
+}
+
+/*RESPONSIVE TABLET*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar {
+    display: none;
+  }
+
+  .all {
+    grid-template-columns: 1fr;
+  }
+
+  .name {
+    display: block;
+  }
+
+}
+
+/*RESPONSIVE CELULAR*/
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .all {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-header {
+    background: linear-gradient(to bottom, #c3f3a7, #36550f);
+  }
+
+  .name {
+    color: #f4f4f4;
+    display: block;
+  }
+
+  .chat-footer {
+    background-color: #456123;
+    opacity: 0.8;
+  }
+
+
+}
+
+@media (max-width: 390px) {
+  .sidebar {
+    display: none;
+  }
+
+  .all {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-header {
+    background: linear-gradient(to bottom, #c3f3a7, #36550f);
+  }
+
+  .chat-actions {
+    display: none;
+  }
+
+  .name {
+    color: #f4f4f4;
+    display: block;
+  }
+
+  .chat-footer {
+    background-color: #456123;
+    opacity: 0.8;
+  }
+
+
 }

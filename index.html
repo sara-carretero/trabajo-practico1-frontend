@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <section>
+  <section class="all">
     <aside class="sidebar">
       <input type="search" placeholder="Search..." class="search">
       <ul class="contact-list">
@@ -67,18 +67,21 @@
       <section class="chat-header">
         <div class="chat-name">
           <img src="./images/avatar.jpeg" alt="imagen de perfil">
-          <h3>Aiden Chavez</h3>
-          <p>Last seen: 2 hours ago</p>
+          <div class="name">
+            <h3>Aiden Chavez</h3>
+            <p>Last seen: 2 hours ago</p>
+          </div>
+
+
         </div>
         <div class="chat-actions">
           <button title="Sacar foto" class="btn">📷</button>
-          <button title="Subir foto" class="btn">🖼️</button>
+          <button title="Enviar imagen" class="btn">🖼️</button>
           <button title="Configuración" class="btn">⚙️</button>
           <button title="Ayuda" class="btn">❓</button>
         </div>
       </section>
       <section class="chat-messages">
-        <div></div>
         <div class="message sent">
           <p>Hi Aiden, how are you? How is the project coming along?</p>
           <p class="timestamp">10:10 AM, Today</p>
@@ -87,7 +90,6 @@
           <p>Are we meeting today?</p>
           <p class="timestamp">10:12 AM, Today</p>
         </div>
-        <div></div>
         <div class="message received">
           <p>Project has been already finished and I have results to show you.</p>
           <p class="timestamp">10:15 AM, Today</p>
