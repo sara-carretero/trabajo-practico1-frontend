@@ -12,5 +12,7 @@ sendButton.addEventListener("click", sendMessage)
 //4. llaves (tecnicamente se llama 'escope'. Es la zona privada de la función) -> {}
 
 function sendMessage() {
+  const message = inputMessage.value
+
 
 }
