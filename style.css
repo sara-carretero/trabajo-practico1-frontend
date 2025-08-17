@@ -82,7 +82,7 @@
 .chat-messages {
   display: flex;
   flex-direction: column;
-  background-image: url("https://static.vecteezy.com/system/resources/previews/027/525/710/non_2x/cute-emoji-designs-seamless-pattern-emoticon-background-vector.jpg");
+  background-color: #b4b4b4;
   height: 100vh;
 }
 
