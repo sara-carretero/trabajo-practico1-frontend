@@ -14,5 +14,17 @@ sendButton.addEventListener("click", sendMessage)
 function sendMessage() {
   const message = inputMessage.value
 
+  //Creo un div para agregar el mensaje.
+  const divMessage = document.createElement("div")
+  //Accedo a la lista de clases de divMessage, y le agrego una clase con add.
+  divMessage.classList.add("message", "sent")
+
+  const text = document.createElement("p")
+  text.textContent = message
+
+  divMessage.appendChild(text)
+
+  //Le agrego un hijo de la sección, al chatMessages, el hijo es containerMessage.
+  chatMessages.appendChild(divMessage)
 
 }
