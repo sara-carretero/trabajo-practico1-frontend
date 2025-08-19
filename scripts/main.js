@@ -49,8 +49,8 @@ function sendMessage() {
     $time.classList.add("timestamp")
     $time.textContent = new Date().toLocaleTimeString()
 
-    $divMessage.appendChild(response)
-    $divMessage.appendChild(time)
+    $divMessage.appendChild($response)
+    $divMessage.appendChild($time)
     $chatMessages.appendChild($divMessage)
   }, 5000)
 }
