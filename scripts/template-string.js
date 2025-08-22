@@ -20,7 +20,7 @@ function sendMenssage() {
   $inputMessage.value = ""
 
   //FUNCIÓN PARA RECIBIR RESPUESTA AUTOMÁTICA (asíncrono)
-  setTimeOut(function () {
+  setTimeout(function () {
     $chatMessages.innerHTML += `
       <div class="message received">
         <p>Recibido ${message} ✅</p>

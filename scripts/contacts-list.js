@@ -1,4 +1,5 @@
 const $contactsList = document.querySelector(".contact-list")
+const $searchInput = document.querySelector(".search")
 
 const contacts = [
   { name: "Vicent Porter", status: "offline", lastConnection: "left 7 mins ago" },
@@ -9,8 +10,12 @@ const contacts = [
   { name: "Dean Harry", status: "offline", lastConnection: "offline since Oct 28" }
 ];
 
-contacts.forEach(function (contact) {
-  $contactsList.innerHTML += `
+function renderContacts(listOfContacts) {
+  $contactsList.innerHTML = ""
+
+  listOfContacts.forEach(function (contact) {
+
+    $contactsList.innerHTML += `
     <li class="contact">
       <img src="./images/avatar.jpeg" alt="imagen de perfil">
       <div>
@@ -20,4 +25,24 @@ contacts.forEach(function (contact) {
       
     </li>
   `
-})
+  })
+}
+
+renderContacts(contacts)
+
+$searchInput.addEventListener("input", searchContacts)
+
+
+function searchContacts() {
+  const inputValue = $searchInput.value.toLowerCase()
+
+  const filteredContacts = [];
+
+  contacts.forEach(function (contact) {
+    if (contact.name.toLowerCase().includes(inputValue)) {
+      filteredContacts.push(contact)
+    }
+  })
+
+  renderContacts(filteredContacts)
+}
